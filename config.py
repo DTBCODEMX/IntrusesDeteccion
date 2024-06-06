@@ -1,9 +1,13 @@
 import logging
 from collections import defaultdict, deque
 from datetime import datetime
+import os
+from logging.handlers import RotatingFileHandler
 
-# Configurar el registro de actividades
-logging.basicConfig(filename="intrusion_log.txt", level=logging.INFO, format="%(asctime)s - %(message)s")
+# Configurar el registro de actividades con rotación de archivos
+log_handler = RotatingFileHandler("intrusion_log.txt", maxBytes=1000000, backupCount=5)
+logging.basicConfig(handlers=[log_handler], level=logging.INFO, format="%(asctime)s - %(message)s")
+
 suspicious_log_file = "suspicious_intrusions.txt"
 
 # Configuraciones por defecto
@@ -21,5 +25,5 @@ ddos_detection_window = deque(maxlen=DDOS_THRESHOLD)
 last_syn_time = defaultdict(datetime)
 
 # Autenticación
-USERNAME = "admin"
-PASSWORD = "admin"
+USERNAME = os.getenv('APP_USERNAME', 'admin')
+PASSWORD = os.getenv('APP_PASSWORD', 'admin')

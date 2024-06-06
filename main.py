@@ -1,14 +1,35 @@
-import tkinter as tk
-from gui import IntrusionDetectionGUI
-import ttkbootstrap as ttk
+import flet as ft
+from multiprocessing import Process
+from gui import LoginWindow, DetectionWindow
+
+def start_login_app():
+    def start(page: ft.Page):
+        page.title = "Sistema de Detección de Intrusiones - Login"
+        page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+        page.vertical_alignment = ft.MainAxisAlignment.CENTER
+        page.bgcolor = ft.colors.BLACK
+
+        def switch_to_detection():
+            page.window_destroy()  # Destruir la ventana de login
+            p = Process(target=start_detection_app)
+            p.start()
+
+        login_window = LoginWindow(switch_to_detection)
+        page.add(login_window.build())
+
+    ft.app(target=start)
+
+def start_detection_app():
+    def start(page: ft.Page):
+        page.title = "Sistema de Detección de Intrusiones"
+        page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+        page.vertical_alignment = ft.MainAxisAlignment.CENTER
+        page.bgcolor = ft.colors.BLACK
+
+        detection_window = DetectionWindow()
+        page.add(detection_window.build())
+
+    ft.app(target=start)
 
 if __name__ == "__main__":
-    root = ttk.Window(themename="darkly")
-    app = IntrusionDetectionGUI(root)
-    # Agregar estilos para texto sospechoso
-    app.text_area.tag_config('suspicious_port', foreground='orange')
-    app.text_area.tag_config('failed_login', foreground='red')
-    app.text_area.tag_config('port_scan', foreground='yellow')
-    app.text_area.tag_config('syn_flood', foreground='purple')
-    app.text_area.tag_config('ddos', foreground='blue')
-    root.mainloop()
+    start_login_app()
