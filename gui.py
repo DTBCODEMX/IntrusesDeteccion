@@ -66,7 +66,7 @@ class DetectionWindow(ft.UserControl):
 
     def build(self):
         self.page = self.page
-        self.log_area = ft.TextField(multiline=True, expand=True, read_only=True, border_radius=8, color="white", bgcolor="#1e1e1e")
+        self.log_area = ft.Column(scroll=ft.ScrollMode.AUTO)
         self.packet_count_label = ft.Text("Paquetes Capturados: 0", color="white", expand=True, size=20)
         self.intrusion_count_label = ft.Text("Intrusiones Detectadas: 0", color="white", expand=True, size=20)
         self.start_button = ft.ElevatedButton(
@@ -81,8 +81,8 @@ class DetectionWindow(ft.UserControl):
         )
         return ft.Column(
             [
-                ft.Row([self.packet_count_label], alignment=ft.MainAxisAlignment.START),
-                self.log_area,
+                ft.Row([self.packet_count_label, self.intrusion_count_label], alignment=ft.MainAxisAlignment.START),
+                ft.Container(self.log_area, expand=True, bgcolor="#1e1e1e", border_radius=8, padding=10),
                 ft.Row([self.start_button], alignment=ft.MainAxisAlignment.CENTER)
             ],
             expand=True

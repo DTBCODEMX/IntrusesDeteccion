@@ -38,6 +38,17 @@ class StateMachine:
 
 state_machine = StateMachine()
 
+def get_color_by_tag(tag):
+    colors = {
+        'suspicious_port': 'yellow',
+        'failed_login': 'red',
+        'port_scan': 'orange',
+        'syn_flood': 'purple',
+        'ddos': 'blue',
+        'default': 'white'
+    }
+    return colors.get(tag, 'white')
+
 def log_intrusion(message, packet=None, tag=None, text_area=None, gui=None):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     log_message = f"{timestamp} - {message}"
@@ -49,7 +60,9 @@ def log_intrusion(message, packet=None, tag=None, text_area=None, gui=None):
         f.write(log_message + '\n')
 
     if text_area:
-        text_area.value += log_message + '\n'
+        color = get_color_by_tag(tag)
+        text_element = ft.Text(value=log_message, color=color)
+        text_area.controls.append(text_element)
         if text_area.page:  # Verificar si el control está añadido a la página antes de actualizar
             text_area.update()
         if gui:
