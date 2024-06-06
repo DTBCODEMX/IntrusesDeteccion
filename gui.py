@@ -12,37 +12,83 @@ class LoginWindow(ft.UserControl):
 
     def build(self):
         self.username_input = ft.TextField(
-            label="Username",
+            label="Correo electrónico",
             border_radius=8,
             color="white",
-            bgcolor="purple"
+            bgcolor="transparent",
+            border_color="white",
+            border_width=2,
+            text_style=ft.TextStyle(color="white")
         )
         self.password_input = ft.TextField(
-            label="Password",
+            label="Contraseña",
             password=True,
             can_reveal_password=True,
             border_radius=8,
             color="white",
-            bgcolor="purple"
+            bgcolor="transparent",
+            border_color="white",
+            border_width=2,
+            text_style=ft.TextStyle(color="white")
         )
-        return ft.Column(
+        self.remember_me = ft.Checkbox(label="Recordar contraseña")
+        self.login_button = ft.ElevatedButton(
+            text="INICIAR",
+            on_click=self.check_credentials,
+            bgcolor="white",  # Changed to white
+            color="black",    # Text color to black for contrast
+            style=ft.ButtonStyle(
+                shape=ft.RoundedRectangleBorder(radius=8),
+                animation_duration=300,
+                padding=ft.Padding(15, 15, 15, 15)  # Padding adjusted
+            )
+        )
+        self.social_buttons = ft.Row(
             [
-                ft.Text("Intrusion Detection System", size=30, color="purple"),
-                self.username_input,
-                self.password_input,
-                ft.ElevatedButton(
-                    text="Login",
-                    on_click=self.check_credentials,
-                    bgcolor="black",
-                    color="purple",
-                    style=ft.ButtonStyle(
-                        shape=ft.RoundedRectangleBorder(radius=8),
-                        animation_duration=300
-                    )
-                )
+                ft.IconButton(icon=ft.icons.EMAIL, icon_color="white"),  # Corrected icon button usage
+                ft.IconButton(icon=ft.icons.FACEBOOK, icon_color="white"),  # Corrected icon button usage
+                ft.IconButton(icon=ft.icons.APPLE, icon_color="white"),  # Corrected icon button usage
             ],
-            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            alignment=ft.MainAxisAlignment.CENTER,
+            alignment=ft.MainAxisAlignment.CENTER
+        )
+        self.create_account_text = ft.Row(
+            [
+                ft.Text("¿No tiene una cuenta?", color="white"),
+                ft.Text("Crear cuenta", color="white", weight=ft.FontWeight.BOLD)
+            ],
+            alignment=ft.MainAxisAlignment.CENTER
+        )
+
+        return ft.Container(
+            content=ft.Column(
+                [
+                    ft.Text("Iniciar Sesión", size=30, color="white", weight=ft.FontWeight.BOLD),
+                    self.username_input,
+                    self.password_input,
+                    self.remember_me,
+                    ft.Container(
+                        content=self.login_button,
+                        alignment=ft.alignment.center,  # Centering the button
+                        padding=ft.Padding(0, 20, 0, 20)  # Adding some padding
+                    ),
+                    ft.Text("Iniciar sesión con", color="white"),
+                    self.social_buttons,
+                    self.create_account_text,
+                ],
+                alignment=ft.MainAxisAlignment.CENTER,
+                horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+                spacing=10
+            ),
+            alignment=ft.alignment.center,
+            padding=20,
+            border_radius=ft.border_radius.all(20),
+            gradient=ft.LinearGradient(
+                begin=ft.alignment.top_center,  # Corrected alignment usage
+                end=ft.alignment.bottom_center,  # Corrected alignment usage
+                colors=["#4d1d4d", "#2b2aea"]  # Updated gradient colors
+            ),
+            width=300,
+            height=500,
         )
 
     def check_credentials(self, e):
