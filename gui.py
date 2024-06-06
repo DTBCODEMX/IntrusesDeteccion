@@ -109,9 +109,12 @@ class DetectionWindow(ft.UserControl):
 
     def sniff_packets(self):
         try:
-            scapy.sniff(prn=lambda packet: self.process_packet(packet), store=False, stop_filter=lambda x: not self.stop_sniffing_event.is_set())
+            scapy.sniff(prn=lambda packet: self.process_packet(packet), store=False, stop_filter=self.should_stop_sniffing)
         except Exception as e:
             log_intrusion(f"Error al capturar paquetes: {e}", text_area=self.log_area)
+
+    def should_stop_sniffing(self, packet):
+        return self.stop_sniffing_event.is_set()
 
     def process_packet(self, packet):
         analyze_packet(packet, self.log_area, gui=self)
