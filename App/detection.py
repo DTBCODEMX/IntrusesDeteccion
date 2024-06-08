@@ -23,15 +23,13 @@ class StateMachine:
     # Transición entre estados
     def transition(self, new_state):
         if self._is_valid_transition(new_state):
-            print(f"Transitioning from {self.state} to {new_state}")
             self.state = new_state
             self.last_activity_time = datetime.now()
+            log_intrusion(f"Transición a estado: {self.state.name}", tag='state_transition')
         else:
             if self.state == new_state:
-                print(f"Maintaining state {self.state}")
                 self.last_activity_time = datetime.now()
-            else:
-                print(f"Invalid transition from {self.state} to {new_state}")
+                log_intrusion(f"Manteniendo estado: {self.state.name}", tag='state_maintenance')
 
     # Validación de transición de estados
     def _is_valid_transition(self, new_state):
@@ -53,21 +51,26 @@ def get_color_by_tag(tag):
         'port_scan': 'orange',
         'syn_flood': 'purple',
         'ddos': 'blue',
+        'state_transition': 'green',
+        'state_maintenance': 'cyan',
         'default': 'white'
     }
     return colors.get(tag, 'white')
 
-# Registrar detalles de la intrusión
+# Registrar detalles de la intrusión y estados
 def log_intrusion(message, packet=None, tag=None, text_area=None, gui=None):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     log_message = f"{timestamp} - {message}"
     if packet:
         log_message += f" | Packet Info: {packet.summary()}"
 
+    # Registrar el mensaje en los archivos de logs y la terminal
     logging.info(log_message)
+    print(log_message)
     with open(suspicious_log_file, "a") as f:
         f.write(log_message + '\n')
 
+    # Mostrar el mensaje en la GUI
     if text_area:
         color = get_color_by_tag(tag)
         text_element = ft.Text(value=log_message, color=color)
@@ -93,8 +96,7 @@ def analyze_packet(packet, text_area, gui=None):
                 dst_port = packet[scapy.TCP].dport
                 flags = packet[scapy.TCP].flags
 
-                # Información de depuración
-                print(f"TCP Packet: {packet.summary()}")
+                # Mostrar información del paquete en la GUI
                 log_intrusion(f"TCP Packet detected: {src_ip} -> {dst_ip}:{dst_port} with flags {flags}", packet, text_area=text_area, gui=gui)
 
                 # Detección de acceso a puerto sospechoso

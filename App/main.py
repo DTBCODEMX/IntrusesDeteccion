@@ -2,8 +2,8 @@
 
 import flet as ft
 from multiprocessing import Process
-from gui import LoginWindow, DetectionWindow
-
+from Gui.GuiMain import LoginWindow, DetectionWindow
+from Gui.GuiMain import start_login_app
 # Inicia la aplicación de login
 def start_login_app():
     def start(page: ft.Page):
