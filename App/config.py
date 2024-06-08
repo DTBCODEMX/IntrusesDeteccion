@@ -4,11 +4,16 @@ from datetime import datetime
 import os
 from logging.handlers import RotatingFileHandler
 
+# Create Logs directory if it doesn't exist
+LOG_DIR = "../Logs"
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
+
 # Configurar el registro de actividades con rotación de archivos
-log_handler = RotatingFileHandler("intrusion_log.txt", maxBytes=1000000, backupCount=5)
+log_handler = RotatingFileHandler(os.path.join(LOG_DIR, "intrusion_log.txt"), maxBytes=1000000, backupCount=5)
 logging.basicConfig(handlers=[log_handler], level=logging.INFO, format="%(asctime)s - %(message)s")
 
-suspicious_log_file = "suspicious_intrusions.txt"
+suspicious_log_file = os.path.join(LOG_DIR, "suspicious_intrusions.txt")
 
 # Configuraciones por defecto
 SUSPICIOUS_PORTS = [23, 2323, 3389]  # Telnet, Telnet alternativo, RDP
