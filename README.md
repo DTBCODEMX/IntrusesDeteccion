@@ -49,6 +49,18 @@ Este sistema de detección de intrusos está diseñado para ser utilizado en ent
 
 Este proyecto fue creado por **DTBCODE: Damian Torres**, Ingeniero en ciberseguridad mexicano. Damian se especializa en el diseño e implementación de soluciones de seguridad informática para proteger redes y sistemas contra amenazas emergentes.
 
+### Aplicaciones Necesarias
+
+- **Python 3.8+**: Asegúrate de tener Python instalado. Puedes descargarlo desde [python.org](https://www.python.org/downloads/).
+
+### Dependencias de Python
+
+Para instalar las dependencias necesarias, ejecuta el siguiente comando:
+```bash
+pip install -r requirements.txt 
+```
+
+
 ---
 
 **Contacto:**
