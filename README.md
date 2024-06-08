@@ -53,7 +53,7 @@ Este proyecto fue creado por **DTBCODE: Damian Torres**, Ingeniero en cibersegur
 
 **Contacto:**
 
-- **Email:** damian.torres@example.com
+- **Email:** damiant1102@outlook.es
 - **LinkedIn:** [linkedin.com/in/damian-torres](https://www.linkedin.com/in/damiantorresmx)
 
 ---
