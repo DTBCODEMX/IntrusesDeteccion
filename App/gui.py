@@ -1,15 +1,19 @@
+# Creado por DTBCODE / 2024
+
 import flet as ft
 from threading import Thread, Event
-from config import *
+from config import USERNAME, PASSWORD
+from auth import log_user_info
 from detection import log_intrusion, analyze_packet
 import scapy.all as scapy
-from auth import log_user_info
 
+# Clase para la ventana de login
 class LoginWindow(ft.UserControl):
     def __init__(self, switch_to_detection):
         super().__init__()
         self.switch_to_detection = switch_to_detection
 
+    # Construcción de la GUI del login
     def build(self):
         self.username_input = ft.TextField(
             label="Correo electrónico",
@@ -35,19 +39,19 @@ class LoginWindow(ft.UserControl):
         self.login_button = ft.ElevatedButton(
             text="INICIAR",
             on_click=self.check_credentials,
-            bgcolor="white",  # Changed to white
-            color="black",    # Text color to black for contrast
+            bgcolor="white",
+            color="black",
             style=ft.ButtonStyle(
                 shape=ft.RoundedRectangleBorder(radius=8),
                 animation_duration=300,
-                padding=ft.Padding(15, 15, 15, 15)  # Padding adjusted
+                padding=ft.Padding(15, 15, 15, 15)
             )
         )
         self.social_buttons = ft.Row(
             [
-                ft.IconButton(icon=ft.icons.EMAIL, icon_color="white"),  # Corrected icon button usage
-                ft.IconButton(icon=ft.icons.FACEBOOK, icon_color="white"),  # Corrected icon button usage
-                ft.IconButton(icon=ft.icons.APPLE, icon_color="white"),  # Corrected icon button usage
+                ft.IconButton(icon=ft.icons.EMAIL, icon_color="white"),
+                ft.IconButton(icon=ft.icons.FACEBOOK, icon_color="white"),
+                ft.IconButton(icon=ft.icons.APPLE, icon_color="white"),
             ],
             alignment=ft.MainAxisAlignment.CENTER
         )
@@ -68,8 +72,8 @@ class LoginWindow(ft.UserControl):
                     self.remember_me,
                     ft.Container(
                         content=self.login_button,
-                        alignment=ft.alignment.center,  # Centering the button
-                        padding=ft.Padding(0, 20, 0, 20)  # Adding some padding
+                        alignment=ft.alignment.center,
+                        padding=ft.Padding(0, 20, 0, 20)
                     ),
                     ft.Text("Iniciar sesión con", color="white"),
                     self.social_buttons,
@@ -83,24 +87,26 @@ class LoginWindow(ft.UserControl):
             padding=20,
             border_radius=ft.border_radius.all(20),
             gradient=ft.LinearGradient(
-                begin=ft.alignment.top_center,  # Corrected alignment usage
-                end=ft.alignment.bottom_center,  # Corrected alignment usage
-                colors=["#4d1d4d", "#2b2aea"]  # Updated gradient colors
+                begin=ft.alignment.top_center,
+                end=ft.alignment.bottom_center,
+                colors=["#4d1d4d", "#2b2aea"]
             ),
             width=300,
             height=500,
         )
 
+    # Verificación de credenciales del usuario
     def check_credentials(self, e):
         if self.username_input.value == USERNAME and self.password_input.value == PASSWORD:
-            log_user_info(None)
+            log_user_info(None, self.username_input.value)
             self.switch_to_detection()
         else:
             self.page.snack_bar = ft.SnackBar(ft.Text("Invalid username or password", color="red"))
             self.page.snack_bar.open = True
-            if self.page:  # Verificar si self.page no es None
+            if self.page:
                 self.page.update()
 
+# Clase para la ventana de detección de intrusos
 class DetectionWindow(ft.UserControl):
     def __init__(self):
         super().__init__()
@@ -110,6 +116,7 @@ class DetectionWindow(ft.UserControl):
         self.stop_sniffing_event = Event()
         self.page = None
 
+    # Construcción de la GUI de detección
     def build(self):
         self.page = self.page
         self.log_area = ft.Column(scroll=ft.ScrollMode.AUTO)
@@ -135,8 +142,9 @@ class DetectionWindow(ft.UserControl):
         )
 
     def did_mount(self):
-        self.page = self.page  # Asegurarse de que self.page esté inicializado correctamente
+        self.page = self.page
 
+    # Iniciar o detener la captura de paquetes
     def start_sniffing_clicked(self, e):
         if not self.sniffing:
             self.sniffing = True
@@ -150,21 +158,24 @@ class DetectionWindow(ft.UserControl):
             self.stop_sniffing_event.set()
             log_intrusion("Deteniendo captura de paquetes.", text_area=self.log_area)
             self.start_button.text = "Iniciar"
-        if self.page:  # Verificar si self.page no es None
+        if self.page:
             self.page.update()
 
+    # Función para capturar paquetes
     def sniff_packets(self):
         try:
             scapy.sniff(prn=lambda packet: self.process_packet(packet), store=False, stop_filter=self.should_stop_sniffing)
         except Exception as e:
             log_intrusion(f"Error al capturar paquetes: {e}", text_area=self.log_area)
 
+    # Verificar si se debe detener la captura de paquetes
     def should_stop_sniffing(self, packet):
         return self.stop_sniffing_event.is_set()
 
+    # Procesar cada paquete capturado
     def process_packet(self, packet):
         analyze_packet(packet, self.log_area, gui=self)
         self.packet_count += 1
         self.packet_count_label.value = f"Paquetes Capturados: {self.packet_count}"
-        if self.packet_count_label:  # Verificar si self.packet_count_label no es None
+        if self.packet_count_label:
             self.packet_count_label.update()

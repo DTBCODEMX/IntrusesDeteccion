@@ -1,0 +1,83 @@
+2024-06-08 01:58:08 - Usuario autenticado - IP: 192.168.1.24, IPv6: 2806:261:48f:5e:b0df:1718:37bb:2186, MAC: D8-43-AE-15-60-E7
+2024-06-08 01:58:10 - Iniciando captura de paquetes...
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.24 -> 40.71.11.167:443 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:54855 > 40.71.11.167:https PA / Raw
+2024-06-08 01:58:11 - TCP Packet detected: 40.71.11.167 -> 192.168.1.24:54855 with flags PA | Packet Info: Ether / IP / TCP 40.71.11.167:https > 192.168.1.24:54855 PA / Raw
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.24 -> 40.71.11.167:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:54855 > 40.71.11.167:https A
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.24 -> 162.159.133.234:443 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:52653 > 162.159.133.234:https PA / Raw
+2024-06-08 01:58:11 - TCP Packet detected: 162.159.133.234 -> 192.168.1.24:52653 with flags PA | Packet Info: Ether / IP / TCP 162.159.133.234:https > 192.168.1.24:52653 PA / Raw
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:50055 > 192.168.1.2:8009 PA / Raw
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:49857 > 192.168.1.2:8009 PA / Raw
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.24 -> 162.159.133.234:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:52653 > 162.159.133.234:https A
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.2 -> 192.168.1.24:49857 with flags A | Packet Info: Ether / IP / TCP 192.168.1.2:8009 > 192.168.1.24:49857 A / Padding
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.2 -> 192.168.1.24:50055 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.2:8009 > 192.168.1.24:50055 PA / Raw
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.2 -> 192.168.1.24:49857 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.2:8009 > 192.168.1.24:49857 PA / Raw
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:50055 > 192.168.1.2:8009 A
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:49857 > 192.168.1.2:8009 A
+2024-06-08 01:58:11 - TCP Packet detected: 192.168.1.24 -> 34.120.195.249:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:54590 > 34.120.195.249:https A / Raw
+2024-06-08 01:58:11 - TCP Packet detected: 34.120.195.249 -> 192.168.1.24:54590 with flags A | Packet Info: Ether / IP / TCP 34.120.195.249:https > 192.168.1.24:54590 A
+2024-06-08 01:58:12 - TCP Packet detected: 192.168.1.24 -> 34.128.128.0:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:54579 > 34.128.128.0:https A / Raw
+2024-06-08 01:58:12 - TCP Packet detected: 34.128.128.0 -> 192.168.1.24:54579 with flags A | Packet Info: Ether / IP / TCP 34.128.128.0:https > 192.168.1.24:54579 A
+2024-06-08 01:58:12 - TCP Packet detected: 192.168.1.24 -> 34.128.128.0:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:54583 > 34.128.128.0:https A / Raw
+2024-06-08 01:58:12 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54583 > 34.128.128.0:https A / Raw
+2024-06-08 01:58:12 - TCP Packet detected: 34.128.128.0 -> 192.168.1.24:54583 with flags A | Packet Info: Ether / IP / TCP 34.128.128.0:https > 192.168.1.24:54583 A
+2024-06-08 01:58:13 - TCP Packet detected: 192.168.1.24 -> 40.79.189.59:443 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:13 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:13 - TCP Packet detected: 192.168.1.24 -> 40.79.189.59:443 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:13 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:13 - TCP Packet detected: 192.168.1.24 -> 40.79.189.59:443 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:13 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:13 - TCP Packet detected: 40.79.189.59 -> 192.168.1.24:54857 with flags A | Packet Info: Ether / IP / TCP 40.79.189.59:https > 192.168.1.24:54857 A / Padding
+2024-06-08 01:58:13 - TCP Packet detected: 40.79.189.59 -> 192.168.1.24:54857 with flags PA | Packet Info: Ether / IP / TCP 40.79.189.59:https > 192.168.1.24:54857 PA / Raw
+2024-06-08 01:58:13 - TCP Packet detected: 192.168.1.24 -> 40.79.189.59:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https A
+2024-06-08 01:58:13 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https A
+2024-06-08 01:58:13 - TCP Packet detected: 40.79.189.59 -> 192.168.1.24:54857 with flags PA | Packet Info: Ether / IP / TCP 40.79.189.59:https > 192.168.1.24:54857 PA / Raw
+2024-06-08 01:58:13 - TCP Packet detected: 192.168.1.24 -> 40.79.189.59:443 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:13 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:13 - TCP Packet detected: 192.168.1.24 -> 40.79.189.59:443 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:13 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54857 > 40.79.189.59:https PA / Raw
+2024-06-08 01:58:14 - TCP Packet detected: 40.79.189.59 -> 192.168.1.24:54857 with flags A | Packet Info: Ether / IP / TCP 40.79.189.59:https > 192.168.1.24:54857 A / Padding
+2024-06-08 01:58:14 - TCP Packet detected: 40.79.189.59 -> 192.168.1.24:54857 with flags A | Packet Info: Ether / IP / TCP 40.79.189.59:https > 192.168.1.24:54857 A
+2024-06-08 01:58:14 - TCP Packet detected: 199.46.35.124 -> 192.168.1.24:51900 with flags PA | Packet Info: Ether / IP / TCP 199.46.35.124:https > 192.168.1.24:51900 PA / Raw
+2024-06-08 01:58:14 - TCP Packet detected: 192.168.1.24 -> 199.46.35.124:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:51900 > 199.46.35.124:https A
+2024-06-08 01:58:14 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:51900 > 199.46.35.124:https A
+2024-06-08 01:58:15 - TCP Packet detected: 162.159.133.234 -> 192.168.1.24:52653 with flags PA | Packet Info: Ether / IP / TCP 162.159.133.234:https > 192.168.1.24:52653 PA / Raw
+2024-06-08 01:58:15 - TCP Packet detected: 192.168.1.24 -> 162.159.133.234:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:52653 > 162.159.133.234:https A
+2024-06-08 01:58:15 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:52653 > 162.159.133.234:https A
+2024-06-08 01:58:16 - TCP Packet detected: 162.159.133.234 -> 192.168.1.24:52653 with flags PA | Packet Info: Ether / IP / TCP 162.159.133.234:https > 192.168.1.24:52653 PA / Raw
+2024-06-08 01:58:16 - TCP Packet detected: 162.159.133.234 -> 192.168.1.24:52653 with flags PA | Packet Info: Ether / IP / TCP 162.159.133.234:https > 192.168.1.24:52653 PA / Raw
+2024-06-08 01:58:16 - TCP Packet detected: 192.168.1.24 -> 162.159.133.234:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:52653 > 162.159.133.234:https A
+2024-06-08 01:58:16 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:52653 > 162.159.133.234:https A
+2024-06-08 01:58:16 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:50055 > 192.168.1.2:8009 PA / Raw
+2024-06-08 01:58:16 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:50055 > 192.168.1.2:8009 PA / Raw
+2024-06-08 01:58:16 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:49857 > 192.168.1.2:8009 PA / Raw
+2024-06-08 01:58:16 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:49857 > 192.168.1.2:8009 PA / Raw
+2024-06-08 01:58:16 - TCP Packet detected: 192.168.1.2 -> 192.168.1.24:50055 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.2:8009 > 192.168.1.24:50055 PA / Raw
+2024-06-08 01:58:16 - TCP Packet detected: 192.168.1.2 -> 192.168.1.24:49857 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.2:8009 > 192.168.1.24:49857 PA / Raw
+2024-06-08 01:58:16 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:50055 > 192.168.1.2:8009 A
+2024-06-08 01:58:16 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:50055 > 192.168.1.2:8009 A
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:49857 > 192.168.1.2:8009 A
+2024-06-08 01:58:17 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:49857 > 192.168.1.2:8009 A
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.2 -> 192.168.1.24:49857 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.2:8009 > 192.168.1.24:49857 PA / Raw
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.2 -> 192.168.1.24:50055 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.2:8009 > 192.168.1.24:50055 PA / Raw
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:49857 > 192.168.1.2:8009 A
+2024-06-08 01:58:17 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:49857 > 192.168.1.2:8009 A
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.24 -> 192.168.1.2:8009 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:50055 > 192.168.1.2:8009 A
+2024-06-08 01:58:17 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:50055 > 192.168.1.2:8009 A
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.24 -> 54.209.108.22:443 with flags S | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https S
+2024-06-08 01:58:17 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https S
+2024-06-08 01:58:17 - TCP Packet detected: 54.209.108.22 -> 192.168.1.24:54943 with flags SA | Packet Info: Ether / IP / TCP 54.209.108.22:https > 192.168.1.24:54943 SA / Padding
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.24 -> 54.209.108.22:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https A
+2024-06-08 01:58:17 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https A
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.24 -> 54.209.108.22:443 with flags PA | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https PA / Raw
+2024-06-08 01:58:17 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https PA / Raw
+2024-06-08 01:58:17 - TCP Packet detected: 54.209.108.22 -> 192.168.1.24:54943 with flags A | Packet Info: Ether / IP / TCP 54.209.108.22:https > 192.168.1.24:54943 A / Padding
+2024-06-08 01:58:17 - TCP Packet detected: 54.209.108.22 -> 192.168.1.24:54943 with flags A | Packet Info: Ether / IP / TCP 54.209.108.22:https > 192.168.1.24:54943 A / Raw
+2024-06-08 01:58:17 - TCP Packet detected: 54.209.108.22 -> 192.168.1.24:54943 with flags A | Packet Info: Ether / IP / TCP 54.209.108.22:https > 192.168.1.24:54943 A / Raw
+2024-06-08 01:58:17 - TCP Packet detected: 54.209.108.22 -> 192.168.1.24:54943 with flags PA | Packet Info: Ether / IP / TCP 54.209.108.22:https > 192.168.1.24:54943 PA / Raw
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.24 -> 54.209.108.22:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https A
+2024-06-08 01:58:17 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https A
+2024-06-08 01:58:17 - TCP Packet detected: 54.209.108.22 -> 192.168.1.24:54943 with flags PA | Packet Info: Ether / IP / TCP 54.209.108.22:https > 192.168.1.24:54943 PA / Raw
+2024-06-08 01:58:17 - Deteniendo captura de paquetes.
+2024-06-08 01:58:17 - TCP Packet detected: 192.168.1.24 -> 54.209.108.22:443 with flags A | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https A
+2024-06-08 01:58:17 - Se detectó escaneo de puertos desde 192.168.1.24 | Packet Info: Ether / IP / TCP 192.168.1.24:54943 > 54.209.108.22:https A
+2024-06-08 02:03:34 - Usuario autenticado - IP: 192.168.1.24, IPv6: 2806:261:48f:5e:b0df:1718:37bb:2186, MAC: D8-43-AE-15-60-E7
